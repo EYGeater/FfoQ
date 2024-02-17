@@ -984,6 +984,8 @@ GameObject:
   - component: {fileID: 1061263948}
   - component: {fileID: 1061263950}
   - component: {fileID: 1061263949}
+  - component: {fileID: 1061263951}
+  - component: {fileID: 1061263952}
   m_Layer: 0
   m_Name: Shooters
   m_TagString: Untagged
@@ -1032,10 +1034,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d28c9ebc71336244a5eb451aee9f013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotData: {fileID: 11400000, guid: ff3d36338f366c94992c330341cc17e0, type: 2}
-  shootPoint: {fileID: 1876652409}
   playerController: {fileID: 1907807793}
   pool: {fileID: 1061263949}
+  shotData: {fileID: 11400000, guid: ff3d36338f366c94992c330341cc17e0, type: 2}
+  shootPoint: {fileID: 1876652409}
+--- !u!114 &1061263951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061263947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d7e70276946d24aa8e64405ecd6279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1907807793}
+  pool: {fileID: 1061263952}
+  shotData: {fileID: 11400000, guid: 8e51281bf6bd3f242bd9702bf6eb3352, type: 2}
+  shootPoint: {fileID: 1876652409}
+--- !u!114 &1061263952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061263947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5152cf06599a6e46a1a99abe4cbc8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: {fileID: 7055338388810080700, guid: a15d505029b263e49bc31370c5c66165, type: 3}
+  maxObjectCount: 20
 --- !u!1 &1113307112
 GameObject:
   m_ObjectHideFlags: 0
