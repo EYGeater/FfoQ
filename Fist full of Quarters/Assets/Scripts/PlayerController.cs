@@ -7,7 +7,11 @@ public class PlayerController : MonoBehaviour
     public bool playerOne;
     public PlayerData playerData;
     public CoinMeter coinMeter;
-    public Transform shootPoint;
+    public bool alive { get
+        {
+            return coinMeter.currMeter > 0;
+        } }
+
 
     private CharacterController characterController;
 
@@ -104,6 +108,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         Debug.Log("Dieded");
+        PlayerTracker.Main.PlayerDeath();
     }
 
     private void InitializeInputKeyCodes()
