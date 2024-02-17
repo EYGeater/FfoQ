@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a611e1d17c4e0f445b3a6e4e403fe658, type: 3}
-  m_Name: ArcShotData
+  m_Script: {fileID: 11500000, guid: 0b7419e2ac5ca9c498c726907ddb6fc9, type: 3}
+  m_Name: BaseEnemyData
   m_EditorClassIdentifier: 
-  speed: 10
-  cooldown: 0.5
-  maxDistance: 100
-  upForce: 1
-  gravityScale: 25
+  rerouteTime: 0.5
+  maxHealth: 5
