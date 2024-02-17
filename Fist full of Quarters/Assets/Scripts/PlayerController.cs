@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public bool playerOne;
     public PlayerData playerData;
     public CoinMeter coinMeter;
+    public Transform shootPoint;
 
     private CharacterController characterController;
 
@@ -22,6 +23,14 @@ public class PlayerController : MonoBehaviour
     private KeyCode redKey = KeyCode.J;
     private KeyCode whiteKey = KeyCode.K;
     private KeyCode blackKey = KeyCode.L;
+
+    public delegate void KeyInputEvent();
+    public KeyInputEvent yellowEvent;
+    public KeyInputEvent greenEvent;
+    public KeyInputEvent blueEvent;
+    public KeyInputEvent redEvent;
+    public KeyInputEvent whiteEvent;
+    public KeyInputEvent blackEvent;
 
     private void Start()
     {
@@ -56,6 +65,30 @@ public class PlayerController : MonoBehaviour
         }
 
         //abilities
+        if (Input.GetKeyDown(yellowKey))
+        {
+            yellowEvent?.Invoke();
+        }
+        if (Input.GetKeyDown(greenKey))
+        {
+            greenEvent?.Invoke();
+        }
+        if (Input.GetKeyDown(blueKey))
+        {
+            blueEvent?.Invoke();
+        }
+        if (Input.GetKeyDown(redKey))
+        {
+            redEvent?.Invoke();
+        }
+        if (Input.GetKeyDown(whiteKey))
+        {
+            whiteEvent?.Invoke();
+        }
+        if (Input.GetKeyDown(blackKey))
+        {
+            blackEvent?.Invoke();
+        }
     }
 
     public void Damage(int delta)
