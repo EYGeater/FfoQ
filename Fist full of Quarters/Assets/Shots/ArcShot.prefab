@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1801407126026973136}
   - component: {fileID: 222386255535006610}
-  - component: {fileID: 8289588434684670883}
   - component: {fileID: 2022541777901887190}
+  - component: {fileID: 6060864358869068707}
   m_Layer: 0
   m_Name: ArcShot
   m_TagString: Untagged
@@ -56,18 +56,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8289588434684670883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7055338388810080700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c74a6eba32b70254d8d27c58bbee5be7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &2022541777901887190
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -90,11 +78,23 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &6060864358869068707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7055338388810080700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddfc4dca46a91849b0b9da662693fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8310516858402307969
 GameObject:
   m_ObjectHideFlags: 0
