@@ -42,25 +42,33 @@ public class BaseEnemy : MonoBehaviour
             float distToTwo =
                 Mathf.Abs(Vector3.Distance(PlayerTracker.Main.player2.transform.position, gameObject.transform.position));
 
-            if (distToOne <= enemyData.distToAttack)
+            if (distToOne <= enemyData.distToAttack && PlayerTracker.Main.player1.alive)
             {
                 Attack(PlayerTracker.Main.player1.gameObject);
                 yield return new WaitForSeconds(enemyData.attackDuration);
-            } else if (distToTwo <= enemyData.distToAttack)
+            } else if (distToTwo <= enemyData.distToAttack && PlayerTracker.Main.player2.alive)
             {
                 Attack(PlayerTracker.Main.player2.gameObject);
                 yield return new WaitForSeconds(enemyData.attackDuration);
             } else
             {
-                if (distToOne < distToTwo)
-                {
-                    navAgent.SetDestination(PlayerTracker.Main.player1.transform.position);
-                }
-                else
+                if (!PlayerTracker.Main.player1.alive)
                 {
                     navAgent.SetDestination(PlayerTracker.Main.player2.transform.position);
+                } else if(!PlayerTracker.Main.player2.alive)
+                {
+                    navAgent.SetDestination(PlayerTracker.Main.player1.transform.position);
+                } else
+                {
+                    if (distToOne < distToTwo)
+                    {
+                        navAgent.SetDestination(PlayerTracker.Main.player1.transform.position);
+                    }
+                    else
+                    {
+                        navAgent.SetDestination(PlayerTracker.Main.player2.transform.position);
+                    }
                 }
-
                 yield return new WaitForSeconds(enemyData.rerouteTime);
                 animator.Play("Walk");
             }
