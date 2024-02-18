@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 222386255535006610}
   - component: {fileID: 8289588434684670883}
   - component: {fileID: 2022541777901887190}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StraightShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: efbce6cab7a75994e83d12ec5a0d8e2e, type: 3}
       propertyPath: m_Name
       value: quarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efbce6cab7a75994e83d12ec5a0d8e2e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

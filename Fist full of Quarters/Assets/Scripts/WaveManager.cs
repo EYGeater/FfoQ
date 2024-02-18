@@ -78,7 +78,7 @@ public class WaveManager : MonoBehaviour
         enemiesRemaining = roundEnemyCount;
         enemiesSpawned = 0;
         StartCoroutine(SpawnRoutine());
-        Debug.Log("enemy health for round " + round + " is " + roundEnemyHealth + "AND" + roundEnemyCount + " enemies will spawn.");
+        Debug.Log("enemy health for round " + round + " is " + roundEnemyHealth + " AND " + roundEnemyCount + " enemies will spawn.");
     }
 
     private IEnumerator SpawnRoutine()
