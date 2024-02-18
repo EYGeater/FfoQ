@@ -54,6 +54,14 @@ public class PlayerController : MonoBehaviour, IShootable
     private void Update()
     {
         GetInput();
+        /*
+        if(!Physics.Raycast(transform.position, Vector3.down, 1.1f))
+        {
+            characterController.enabled = false;
+
+            characterController.enabled = true;
+        }
+        */
     }
 
     private void GetInput()
