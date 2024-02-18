@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.39677492, g: 0.41447568, b: 0.41028655, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4167,7 +4167,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6233b14d465edff4f8d2f1f4a94c9295, type: 2}
+  - {fileID: 2100000, guid: d66a9afe0e968e1478e0fbfed09b3e9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4649,14 +4649,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873795489}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.9644561, y: -0.20713915, z: -0.15517908, w: 0.053266864}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.204, y: -161.238, z: -155.393}
 --- !u!1 &881254756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5235,7 +5235,6 @@ MonoBehaviour:
   playerOne: 0
   playerData: {fileID: 11400000, guid: fcf2eefb811979e409f7a9c958c08aae, type: 2}
   coinMeter: {fileID: 2066581828}
-  shootPoint: {fileID: 0}
 --- !u!136 &961429253
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7597,7 +7596,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d66a9afe0e968e1478e0fbfed09b3e9c, type: 2}
+  - {fileID: 2100000, guid: 6233b14d465edff4f8d2f1f4a94c9295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9473,14 +9472,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721262568}
-  m_LocalRotation: {x: -0, y: 0.18146195, z: -0, w: -0.983398}
-  m_LocalPosition: {x: 18.32, y: -15.812656, z: 38.9}
+  m_LocalRotation: {x: -0, y: 0.22797252, z: -0, w: -0.9736676}
+  m_LocalPosition: {x: 19.1, y: -15.812656, z: 38.9}
   m_LocalScale: {x: 1.7259002, y: 10.118, z: 24.576359}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1388726996}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 339.09, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 333.645, z: 0}
 --- !u!65 &1721262570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12453,7 +12452,6 @@ MonoBehaviour:
   playerOne: 1
   playerData: {fileID: 11400000, guid: fcf2eefb811979e409f7a9c958c08aae, type: 2}
   coinMeter: {fileID: 1118902383}
-  shootPoint: {fileID: 0}
 --- !u!136 &2078577008
 CapsuleCollider:
   m_ObjectHideFlags: 0
