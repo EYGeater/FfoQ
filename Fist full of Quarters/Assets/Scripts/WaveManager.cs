@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.AI;
 
 public class WaveManager : MonoBehaviour
 {
@@ -78,7 +79,7 @@ public class WaveManager : MonoBehaviour
         enemiesRemaining = roundEnemyCount;
         enemiesSpawned = 0;
         StartCoroutine(SpawnRoutine());
-        Debug.Log("enemy health for round " + round + " is " + roundEnemyHealth + " AND " + roundEnemyCount + " enemies will spawn.");
+        //Debug.Log("enemy health for round " + round + " is " + roundEnemyHealth + " AND " + roundEnemyCount + " enemies will spawn.");
     }
 
     private IEnumerator SpawnRoutine()
@@ -98,11 +99,13 @@ public class WaveManager : MonoBehaviour
         enemiesSpawned++;
         GameObject enemy = enemyPool.PullFromPool();
         enemy.SetActive(true);
+        enemy.GetComponent<NavMeshAgent>().enabled = false;
         enemy.GetComponent<BaseEnemy>().ResetEnemy(roundEnemyHealth, this);
 
         EnemySpawner tmp = spawners[Random.Range(0, spawners.Length - 1)];
 
         enemy.transform.position = tmp.spawnPoint.transform.position;
+        enemy.GetComponent<NavMeshAgent>().enabled = true;
     }
 
     public void EnemyDied()
@@ -116,7 +119,7 @@ public class WaveManager : MonoBehaviour
 
     public void EndRound()
     {
-        Debug.Log("Round ended");
+        //Debug.Log("Round ended");
         PlayerPrefs.SetInt(TOTAL_ROUNDS, PlayerPrefs.GetInt(TOTAL_ROUNDS, 0) + 1);
         if (round > PlayerPrefs.GetInt(HIGHEST_ROUND, 0)) PlayerPrefs.SetInt(HIGHEST_ROUND, round);
         StartCoroutine(EndRoundRoutine());
