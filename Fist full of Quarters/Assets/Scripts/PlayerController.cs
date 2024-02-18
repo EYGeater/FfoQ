@@ -40,11 +40,14 @@ public class PlayerController : MonoBehaviour, IShootable
     public KeyInputEvent whiteEvent;
     public KeyInputEvent blackEvent;
 
+    public Animator a;
+
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
         coinMeter.meterAtZeroEvent += Die;
         InitializeInputKeyCodes();
+        a = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -78,10 +81,12 @@ public class PlayerController : MonoBehaviour, IShootable
         if (Input.GetKeyDown(yellowKey))
         {
             yellowEvent?.Invoke();
+            a.Play("Flick");
         }
         if (Input.GetKeyDown(greenKey))
         {
             greenEvent?.Invoke();
+            a.Play("Flick");
         }
         if (Input.GetKeyDown(blueKey))
         {
