@@ -445,10 +445,10 @@ Transform:
   - {fileID: 1999033340180212459}
   - {fileID: 1622360979271908369}
   - {fileID: 2208948719478884330}
-  - {fileID: 2107465160024024652}
+  - {fileID: 4010579632142641006}
   - {fileID: 2685606098140343741}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1581036515346494902
 MeshFilter:
@@ -559,8 +559,8 @@ CharacterController:
   serializedVersion: 3
   m_Height: 1
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 20
+  m_StepOffset: 0.01
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -847,7 +847,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3b9eef828c00e34c9da2a98f4029859, type: 3}
---- !u!4 &2107465160024024652 stripped
+--- !u!4 &4010579632142641006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4069574978997668849, guid: f3b9eef828c00e34c9da2a98f4029859, type: 3}
   m_PrefabInstance: {fileID: 1140105652584983711}

@@ -9,6 +9,7 @@ public class EnemyHitbox : MonoBehaviour, IShootable
 
     public void OnShot(GameObject shot)
     {
-        enemy.ChangeHealth(-(int)(damageMultiplier * 1f));
+        //Debug.Log("Dealt " + (-(int)(damageMultiplier * 1f)) + " damage.");
+        enemy.ChangeHealth(-1* (int)(damageMultiplier * 1f));
     }
 }
