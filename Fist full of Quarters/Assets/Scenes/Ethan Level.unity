@@ -17940,6 +17940,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+--- !u!114 &1478988545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8031019571276167272, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+  m_PrefabInstance: {fileID: 1478988544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bca55b8996e4144bde128f83854870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1478988546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 635497596875973369, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+  m_PrefabInstance: {fileID: 1478988544}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &1478988547 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5663257961423812376, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+  m_PrefabInstance: {fileID: 1478988544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1539198519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20757,6 +20784,22 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 1383731384}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: levelName
+      value: The Arcade
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: loseScreen
+      value: 
+      objectReference: {fileID: 1478988547}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: waveManager
+      value: 
+      objectReference: {fileID: 1478988545}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: youSurvivedText
+      value: 
+      objectReference: {fileID: 1478988546}
     - target: {fileID: 8932922852270148734, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
       propertyPath: m_RootOrder
       value: 0
