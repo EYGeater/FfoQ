@@ -195,17 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6524635415c2d4ebf3c5d97de40caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &311495743 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 404822074594415488, guid: 9d038e0df9562b842a3235c4b8dab694, type: 3}
-  m_PrefabInstance: {fileID: 8992139898227888242}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56c3d4b5574cfd34ca2667f4894e91c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &410238805
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +427,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620796299}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!225 &652125302 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5663257961423812376, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+  m_PrefabInstance: {fileID: 2874886452057744118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &680963888 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6625568728054414703, guid: c0eced89f0c8ac242844c9b5e41c21ec, type: 3}
@@ -997,6 +991,17 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1593930499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 635497596875973369, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+  m_PrefabInstance: {fileID: 2874886452057744118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604692297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1479,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006632842}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2089506990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8031019571276167272, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+  m_PrefabInstance: {fileID: 2874886452057744118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bca55b8996e4144bde128f83854870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1272929111205316655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,6 +1510,22 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 285878592}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: levelName
+      value: The Sandbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: loseScreen
+      value: 
+      objectReference: {fileID: 652125302}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: waveManager
+      value: 
+      objectReference: {fileID: 2089506990}
+    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
+      propertyPath: youSurvivedText
+      value: 
+      objectReference: {fileID: 1593930499}
     - target: {fileID: 8932922852270148734, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1680,21 +1712,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1259284485082212337, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259284485082212337, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259284485082212337, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -25
-      objectReference: {fileID: 0}
     - target: {fileID: 1877030364695335952, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
       propertyPath: m_SortingOrder
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2154279206423055882, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
       propertyPath: m_RootOrder
@@ -1744,6 +1764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5663257961423812376, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8031019571276167272, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
       propertyPath: spawners.Array.data[0]
       value: 
@@ -1756,22 +1780,6 @@ PrefabInstance:
       propertyPath: spawners.Array.data[2]
       value: 
       objectReference: {fileID: 689995224}
-    - target: {fileID: 8293480968997367677, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293480968997367677, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293480968997367677, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_enableWordWrapping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293480968997367677, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1833,14 +1841,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3488516506041857666, guid: 9d038e0df9562b842a3235c4b8dab694, type: 3}
-      propertyPath: coinMeter
-      value: 
-      objectReference: {fileID: 311495743}
-    - target: {fileID: 6461004678784687411, guid: 9d038e0df9562b842a3235c4b8dab694, type: 3}
-      propertyPath: coinMeter
-      value: 
-      objectReference: {fileID: 311495743}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

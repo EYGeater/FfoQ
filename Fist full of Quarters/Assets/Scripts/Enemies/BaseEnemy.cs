@@ -10,6 +10,8 @@ public class BaseEnemy : MonoBehaviour
     private NavMeshAgent navAgent;
     private WaveManager waveManager;
 
+    public Animator animator;
+
     /*
     private void Start()
     {
@@ -18,7 +20,10 @@ public class BaseEnemy : MonoBehaviour
         StartCoroutine(FindTargetsRoutine());
     }
     */
-
+    public void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
     public void ResetEnemy(int newHealth, WaveManager wm)
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -57,12 +62,14 @@ public class BaseEnemy : MonoBehaviour
                 }
 
                 yield return new WaitForSeconds(enemyData.rerouteTime);
+                animator.Play("Walk");
             }
         }
     }
 
     public void Attack(GameObject target)
     {
+        animator.Play("Attack");
         RaycastHit hitData;
         if(Physics.Raycast(transform.position, transform.forward, out hitData, enemyData.attackRange))
         {
@@ -85,6 +92,7 @@ public class BaseEnemy : MonoBehaviour
 
     public void Die()
     {
+        animator.Play("hit");
         waveManager.EnemyDied();
         gameObject.SetActive(false);
     }
