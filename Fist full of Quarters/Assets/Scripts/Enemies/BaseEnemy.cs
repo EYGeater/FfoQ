@@ -11,6 +11,7 @@ public class BaseEnemy : MonoBehaviour
     private WaveManager waveManager;
 
     public Animator animator;
+    public GameObject coinCollect;
 
     /*
     private void Start()
@@ -27,6 +28,7 @@ public class BaseEnemy : MonoBehaviour
     public void ResetEnemy(int newHealth, WaveManager wm)
     {
         navAgent = GetComponent<NavMeshAgent>();
+        navAgent.stoppingDistance = 3f;
         health = newHealth;
         waveManager = wm;
         StartCoroutine(FindTargetsRoutine());
@@ -102,6 +104,14 @@ public class BaseEnemy : MonoBehaviour
     {
         animator.Play("hit");
         waveManager.EnemyDied();
+        GetComponentInChildren<ParticleSystem>().Play();
+        coinCollect.SetActive(true);
+        Invoke(nameof(Delete), 3f);
+    }
+
+    private void Delete()
+    {
+        coinCollect.SetActive(false);
         gameObject.SetActive(false);
     }
 }

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour, IShootable
     public PlayerData playerData;
     public CoinMeter coinMeter;
     public CanvasGroup deadScreen;
+    private Tween deathTween;
     public bool alive { get
         {
             return coinMeter.currMeter > 0;
@@ -122,13 +123,15 @@ public class PlayerController : MonoBehaviour, IShootable
     {
         Debug.Log("Dieded");
         PlayerTracker.Main.PlayerDeath();
-        DOTween.To(() => deadScreen.alpha, x => deadScreen.alpha = x, 1f, 1f).SetEase(Ease.InOutCubic);
+        if (deathTween != null) deathTween.Kill();
+        deathTween = DOTween.To(() => deadScreen.alpha, x => deadScreen.alpha = x, 1f, 1f).SetEase(Ease.InOutCubic);
         dead = true;
     }
 
     public void Revive()
     {
         dead = false;
+        if (deathTween != null) deathTween.Kill();
         DOTween.To(() => deadScreen.alpha, x => deadScreen.alpha = x, 0f, 0.4f).SetEase(Ease.InOutCubic);
         coinMeter.ChangeMeter(coinMeter.maxMeter/10);
     }
