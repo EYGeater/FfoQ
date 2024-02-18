@@ -11,4 +11,6 @@ public class EnemyData : ScriptableObject
     [Tooltip("When within this distance from a player, they will stop moving and attack")]
     public float distToAttack;
     public float attackDuration;
+    public float attackRange;
+    public int attackDamage;
 }

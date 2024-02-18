@@ -8,6 +8,7 @@ public abstract class ShootScript : MonoBehaviour
     public ObjectPool pool;
     public ShotData shotData;
     public Transform shootPoint;
+    public CoinMeter coinMeter;
 
     protected bool canShoot = true;
     public void StartCooldown()
@@ -33,6 +34,8 @@ public abstract class ShootScript : MonoBehaviour
             shot.transform.position = shootPoint.position;
             shot.GetComponent<Shot>().Fire(playerController.transform.forward, shotData);
 
+
+            coinMeter.ChangeMeter(-1);
             StartCooldown();
         }
     }

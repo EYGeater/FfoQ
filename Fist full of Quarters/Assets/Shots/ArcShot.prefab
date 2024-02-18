@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 222386255535006610}
   - component: {fileID: 2022541777901887190}
   - component: {fileID: 6060864358869068707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ArcShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3030336812880761713}
   - component: {fileID: 4091331467305381219}
   - component: {fileID: 8534038222453034420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

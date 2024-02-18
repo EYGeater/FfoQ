@@ -16,3 +16,5 @@ MonoBehaviour:
   maxHealth: 5
   distToAttack: 5
   attackDuration: 1
+  attackRange: 8
+  attackDamage: 10

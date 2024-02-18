@@ -63,7 +63,15 @@ public class BaseEnemy : MonoBehaviour
 
     public void Attack(GameObject target)
     {
-        //Debug.Log("Attack");
+        RaycastHit hitData;
+        if(Physics.Raycast(transform.position, transform.forward, out hitData, enemyData.attackRange))
+        {
+            PlayerController pcon = hitData.collider.gameObject.GetComponent<PlayerController>();
+            if(pcon != null)
+            {
+                pcon.Damage(enemyData.attackDamage);
+            }
+        }
     }
 
     public void ChangeHealth(int delta)
