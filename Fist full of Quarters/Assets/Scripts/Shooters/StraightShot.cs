@@ -20,11 +20,24 @@ public class StraightShot : Shot
             transform.position += moveVector;
             distanceTraveled += moveVector.magnitude;
 
+            CheckRaycast(forward, shotData);
+
             if (distanceTraveled > shotData.maxDistance) DestroyShot();
 
             //wait a frame before progressing
             yield return null;
         }
+    }
+
+    private void CheckRaycast(Vector3 dir, ShotData shotData)
+    {
+        RaycastHit hitData;
+        if(Physics.Raycast(transform.position, dir, out hitData, shotData.speed * 0.1f))
+        {
+            ShootContact(hitData.collider);
+            DestroyShot();
+        }
+
     }
 
     public override void DestroyShot()

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rerouteTime: 0.5
   maxHealth: 5
-  distToAttack: 2
+  distToAttack: 5
   attackDuration: 1
