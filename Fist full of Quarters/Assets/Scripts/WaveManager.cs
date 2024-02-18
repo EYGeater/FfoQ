@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private TMP_Text roundCounterText;
+
     [Header("General")]
     public ObjectPool enemyPool;
     public EnemySpawner[] spawners;
@@ -51,12 +55,16 @@ public class WaveManager : MonoBehaviour
         spawnRate = startingSpawnRate;
         if (minimumSpawnRate <= 0) minimumSpawnRate = 0.1f;
 
+        roundEnemyHealth = round1EnemyHealth;
+        roundCounterText.text = "" + 1;
+
         Invoke(nameof(StartRound), timeBeforeFirstRound);
     }
 
     public void StartRound()
     {
         round++;
+        roundCounterText.text = "" + round;
         //interval round
         if(round % roundHPIncreaseIntervals == 0)
         {
@@ -70,6 +78,7 @@ public class WaveManager : MonoBehaviour
         enemiesRemaining = roundEnemyCount;
         enemiesSpawned = 0;
         StartCoroutine(SpawnRoutine());
+        Debug.Log("enemy health for round " + round + " is " + roundEnemyHealth + "AND" + roundEnemyCount + " enemies will spawn.");
     }
 
     private IEnumerator SpawnRoutine()
@@ -89,7 +98,7 @@ public class WaveManager : MonoBehaviour
         enemiesSpawned++;
         GameObject enemy = enemyPool.PullFromPool();
         enemy.SetActive(true);
-        enemy.GetComponent<BaseEnemy>().ResetEnemy(roundEnemyHealth);
+        enemy.GetComponent<BaseEnemy>().ResetEnemy(roundEnemyHealth, this);
 
         EnemySpawner tmp = spawners[Random.Range(0, spawners.Length - 1)];
 
@@ -115,10 +124,10 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator EndRoundRoutine()
     {
-        StopAllCoroutines();
         //play end round music
 
         //update round counter
+        roundCounterText.text = "" + round;
 
         yield return new WaitForSeconds(timeBetweenRounds);
         StartRound();

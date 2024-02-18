@@ -8,18 +8,22 @@ public class BaseEnemy : MonoBehaviour
     public EnemyData enemyData;
     private int health;
     private NavMeshAgent navAgent;
+    private WaveManager waveManager;
 
+    /*
     private void Start()
     {
         health = enemyData.maxHealth;
         navAgent = GetComponent<NavMeshAgent>();
         StartCoroutine(FindTargetsRoutine());
     }
+    */
 
-    public void ResetEnemy(int newHealth)
+    public void ResetEnemy(int newHealth, WaveManager wm)
     {
         navAgent = GetComponent<NavMeshAgent>();
         health = newHealth;
+        waveManager = wm;
         StartCoroutine(FindTargetsRoutine());
     }
 
@@ -65,7 +69,7 @@ public class BaseEnemy : MonoBehaviour
     public void ChangeHealth(int delta)
     {
         health += delta;
-        if(health <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -73,6 +77,7 @@ public class BaseEnemy : MonoBehaviour
 
     public void Die()
     {
+        waveManager.EnemyDied();
         gameObject.SetActive(false);
     }
 }

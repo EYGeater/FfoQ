@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 87ee1cea3eb15a64294e9bf3264b6928
+  - enabled: 1
+    path: Assets/Scenes/Laser_Tag.unity
+    guid: de124ed42b2a4e0428a8568a22302f2f
+  - enabled: 1
+    path: Assets/Scenes/Casino.unity
+    guid: f0b00da10b259144698e2c9c57d9c157
+  - enabled: 1
+    path: Assets/Scenes/Spaceship.unity
+    guid: 09c3d55e8286b254e9b39639f67d5fec
+  - enabled: 1
+    path: Assets/Scenes/Ethan Level.unity
+    guid: c678393a82464e449818de7d8e4073a6
   m_configObjects: {}
