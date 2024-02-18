@@ -28,6 +28,7 @@ public class BaseEnemy : MonoBehaviour
     public void ResetEnemy(int newHealth, WaveManager wm)
     {
         navAgent = GetComponent<NavMeshAgent>();
+        navAgent.stoppingDistance = 3f;
         health = newHealth;
         waveManager = wm;
         StartCoroutine(FindTargetsRoutine());
