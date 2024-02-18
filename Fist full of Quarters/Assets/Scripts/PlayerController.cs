@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IShootable
 {
     public bool playerOne;
     public PlayerData playerData;
     public CoinMeter coinMeter;
+    public CanvasGroup deadScreen;
     public bool alive { get
         {
             return coinMeter.currMeter > 0;
         } }
+
+    private bool dead = false;
 
 
     private CharacterController characterController;
@@ -50,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     private void GetInput()
     {
+        if (dead) return;
+        
         //movement
         if (Input.GetKey(upKey))
         {
@@ -97,11 +103,13 @@ public class PlayerController : MonoBehaviour
 
     public void Damage(int delta)
     {
+        if (dead) return;
         coinMeter.ChangeMeter(-delta);
     }
 
     public void Heal(int delta)
     {
+        if (dead) return;
         coinMeter.ChangeMeter(delta);
     }
 
@@ -109,6 +117,15 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Dieded");
         PlayerTracker.Main.PlayerDeath();
+        DOTween.To(() => deadScreen.alpha, x => deadScreen.alpha = x, 1f, 1f).SetEase(Ease.InOutCubic);
+        dead = true;
+    }
+
+    public void Revive()
+    {
+        dead = false;
+        DOTween.To(() => deadScreen.alpha, x => deadScreen.alpha = x, 0f, 0.4f).SetEase(Ease.InOutCubic);
+        coinMeter.ChangeMeter(coinMeter.maxMeter/10);
     }
 
     private void InitializeInputKeyCodes()
@@ -142,4 +159,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnShot(GameObject shot)
+    {
+        if (dead) Revive();
+    }
 }
