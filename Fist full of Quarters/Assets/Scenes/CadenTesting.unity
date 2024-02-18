@@ -1528,10 +1528,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 285878592}
     - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
-      propertyPath: levelName
-      value: The Sandbox
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964557129068432699, guid: e20623dadb7bccd4abc98f61b3552d16, type: 3}
       propertyPath: loseScreen
       value: 
       objectReference: {fileID: 652125302}
@@ -1729,10 +1725,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1877030364695335952, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 2154279206423055882, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -1780,10 +1772,6 @@ PrefabInstance:
     - target: {fileID: 4490425669112710489, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
       propertyPath: m_Name
       value: WaveManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5663257961423812376, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
-      propertyPath: m_Alpha
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8031019571276167272, guid: e1f2b4c2f85c29e498218e7c34de4a2e, type: 3}
       propertyPath: spawners.Array.data[0]
