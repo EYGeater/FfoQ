@@ -16,6 +16,13 @@ public class BaseEnemy : MonoBehaviour
         StartCoroutine(FindTargetsRoutine());
     }
 
+    public void ResetEnemy(int newHealth)
+    {
+        navAgent = GetComponent<NavMeshAgent>();
+        health = newHealth;
+        StartCoroutine(FindTargetsRoutine());
+    }
+
     private IEnumerator FindTargetsRoutine()
     {
         while (true)
@@ -52,13 +59,13 @@ public class BaseEnemy : MonoBehaviour
 
     public void Attack(GameObject target)
     {
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
     }
 
     public void ChangeHealth(int delta)
     {
         health += delta;
-        if(health < 0)
+        if(health <= 0)
         {
             Die();
         }

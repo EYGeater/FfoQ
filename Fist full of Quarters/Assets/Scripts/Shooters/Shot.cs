@@ -10,7 +10,7 @@ public abstract class Shot : MonoBehaviour
     public void ShootContact(Collider other)
     {
         IShootable shootable = other.gameObject.GetComponent<IShootable>();
-        shootable.OnShot(gameObject);
+        if(shootable != null) shootable.OnShot(gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {

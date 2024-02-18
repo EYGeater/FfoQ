@@ -28,12 +28,6 @@ public class ArcShot : Shot {
         }
     }
 
-
-    private void OnTriggerEnter(Collider other)
-    {
-        DestroyShot();
-    }
-
     public override void DestroyShot()
     {
         if (gravityRoutine != null) StopCoroutine(gravityRoutine);

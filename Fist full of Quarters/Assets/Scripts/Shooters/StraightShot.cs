@@ -27,11 +27,6 @@ public class StraightShot : Shot
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        DestroyShot();
-    }
-
     public override void DestroyShot()
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
