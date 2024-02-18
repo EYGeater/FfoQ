@@ -32,7 +32,7 @@ public class StraightShot : Shot
     private void CheckRaycast(Vector3 dir, ShotData shotData)
     {
         RaycastHit hitData;
-        if(Physics.Raycast(transform.position, dir, out hitData, shotData.speed * 0.1f))
+        if(Physics.Raycast(transform.position, dir, out hitData, shotData.speed * 0.5f))
         {
             ShootContact(hitData.collider);
             DestroyShot();
