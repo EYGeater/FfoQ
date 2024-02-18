@@ -132,4 +132,9 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenRounds);
         StartRound();
     }
+
+    public int GetRound()
+    {
+        return round;
+    }
 }
