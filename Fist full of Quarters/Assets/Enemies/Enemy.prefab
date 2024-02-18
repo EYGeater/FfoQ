@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: f9637b02dfb5c5849a9b9724a10d2fd4, type: 2}
   animator: {fileID: 8459220285121611811}
-  coinCollect: {fileID: 0}
+  coinCollect: {fileID: 3794387275684014125}
 --- !u!195 &53709317483808794
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -580,6 +580,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1891965b62d25484aa1de37cd4c8a93a, type: 3}
+--- !u!1 &3794387275684014125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8439847939247359792, guid: 1891965b62d25484aa1de37cd4c8a93a, type: 3}
+  m_PrefabInstance: {fileID: 4722028485513490205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8464688814179861122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3814722896277237151, guid: 1891965b62d25484aa1de37cd4c8a93a, type: 3}

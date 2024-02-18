@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: f9637b02dfb5c5849a9b9724a10d2fd4, type: 2}
   animator: {fileID: 8459220285121611811}
-  coinCollect: {fileID: 0}
+  coinCollect: {fileID: 3794387275684014125}
 --- !u!195 &53709317483808794
 NavMeshAgent:
   m_ObjectHideFlags: 0
